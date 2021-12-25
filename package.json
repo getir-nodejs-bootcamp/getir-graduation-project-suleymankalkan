@@ -1,0 +1,19 @@
+{
+  "name": "getir-nodejs-bootcamp-graduation-project-suleymankalkan",
+  "version": "1.0.0",
+  "description": "Getir Backend Assingment",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getir-nodejs-bootcamp/getir-nodejs-bootcamp-graduation-project-suleymankalkan.git"
+  },
+  "author": "Suleyman Kalkan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/getir-nodejs-bootcamp/getir-nodejs-bootcamp-graduation-project-suleymankalkan/issues"
+  },
+  "homepage": "https://github.com/getir-nodejs-bootcamp/getir-nodejs-bootcamp-graduation-project-suleymankalkan#readme"
+}
