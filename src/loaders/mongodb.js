@@ -8,10 +8,14 @@ db.once("open", () => {
 
 const connectDB = async () => {
   const { DB_URL } = process.env;
-  await Mongoose.connect(DB_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  try {
+    await Mongoose.connect(DB_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 module.exports = {
