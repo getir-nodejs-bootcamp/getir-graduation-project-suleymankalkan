@@ -1,12 +1,18 @@
-const { list } = require('../services/Records');
+const { listFiltered } = require('../services/Records');
 
-const listAll = (req, res) => {
-  list()
-    .then((recordList) => {
-      if (!recordList) res.status(404).send({ error: 'Sorun var..' });
-      res.status(200).send(recordList);
-    })
-    .catch((e) => res.status(501).send(e));
+const list = (req, res) => {
+  try {
+    const {
+      startDate, endDate, minCount, maxCount,
+    } = req.body;
+
+    listFiltered(startDate, endDate, minCount, maxCount)
+      .then((reqPayload) => {
+        res.send(reqPayload);
+      });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-module.exports = { listAll };
+module.exports = { list };
