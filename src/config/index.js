@@ -1,4 +1,4 @@
-const setEnv = require("./server");
+const setEnv = require('./server');
 
 module.exports = () => {
   setEnv();

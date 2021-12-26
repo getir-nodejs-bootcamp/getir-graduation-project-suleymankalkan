@@ -1,1 +1,1 @@
-module.exports.RecordRoutes = require("./Records");
+module.exports.RecordRoutes = require('./Records');

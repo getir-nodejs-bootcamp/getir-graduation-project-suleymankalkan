@@ -1,4 +1,4 @@
-const { connectDB } = require("./mongodb");
+const { connectDB } = require('./mongodb');
 
 module.exports = () => {
   connectDB();

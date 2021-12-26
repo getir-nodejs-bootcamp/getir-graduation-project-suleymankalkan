@@ -1,7 +1,5 @@
 const Record = require('../models/Record');
 
-const list = () => {
-  return Record.find({});
-};
+const list = () => Record.find({});
 
 module.exports = { list };

@@ -1,9 +1,9 @@
-const Mongoose = require("mongoose");
+const Mongoose = require('mongoose');
 
 const db = Mongoose.connection;
 
-db.once("open", () => {
-  console.log("Connected to MongoDB successfully.");
+db.once('open', () => {
+  console.log('Connected to MongoDB successfully.');
 });
 
 const connectDB = async () => {
