@@ -1,5 +1,5 @@
 const { connectDB } = require('./mongodb');
 
-module.exports = () => {
-  connectDB();
+module.exports = async () => {
+  await connectDB();
 };
