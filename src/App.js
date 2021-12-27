@@ -4,7 +4,7 @@ const app = express();
 const { RecordRoutes } = require('./routes');
 const config = require('./config');
 const loaders = require('./loaders');
-const { logError, returnError } = require('./middlewares/errorHandler');
+const { returnError } = require('./middlewares/errorHandler');
 const Api404Error = require('./errors/api404Error');
 
 config();
@@ -18,7 +18,6 @@ app.use('*', () => {
   throw new Api404Error();
 });
 
-app.use(logError);
 app.use(returnError);
 
 app.listen(process.env.SERV_PORT, () => {

@@ -1,16 +1,13 @@
 const BaseError = require('../errors/baseError');
 const recordResponse = require('../utils/recordResponse');
+const logger = require('../utils/logger');
 
 function logError(err) {
-  console.error(err);
+  logger.log({ level: 'error', message: err });
 }
 
-function logErrorMiddleware(err, req, res, next) {
+function returnError(err, req, res) {
   logError(err);
-  next(err);
-}
-
-function returnError(err, req, res, next) {
   res.status(err.statusCode || 500).send(recordResponse(2, err.message));
 }
 
@@ -23,7 +20,6 @@ function isOperationalError(error) {
 
 module.exports = {
   logError,
-  logErrorMiddleware,
   returnError,
   isOperationalError,
 };
