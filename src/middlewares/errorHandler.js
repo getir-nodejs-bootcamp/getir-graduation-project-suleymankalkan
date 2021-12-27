@@ -6,7 +6,7 @@ function logError(err) {
   logger.log({ level: 'error', message: err });
 }
 
-function returnError(err, req, res) {
+function returnError(err, req, res, next) {
   logError(err);
   res.status(err.statusCode || 500).send(recordResponse(2, err.message));
 }

@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon src/App.js",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,13 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
     "jest": "^27.4.5",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
